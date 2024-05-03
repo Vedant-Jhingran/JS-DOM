@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    <h1>Your image is visible.</h1>
+    <button onclick="toggleImage()">Toggle image</button></br></br>
+    <img id="image" src="https://learn.pwskills.com/_next/image?url=https%3A%2F%2Fcdn.pwskills.com%2Fassets%2Fuploads%2Fthumbnails%2F642152e5af09d60df056811a.png&w=1920&q=75" alt="picture of 3">
+
+    <script>
+        function toggleImage() {
+            let image = document.getElementById("image");
+            if (image.style.display == "none") {
+                image.style.display = "block"
+                document.querySelector("h1").innerText = "Your image is visible."
+            } else {
+                image.style.display = "none"
+                document.querySelector("h1").innerText = "Your image is hidden."
+            }
+        }
+    </script>
+</body>
+</html>

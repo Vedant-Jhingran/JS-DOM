@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Background Color</title>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 3em;
+        color: white;
+    }
+</style>
+</head>
+<body id="body">
+
+<script>
+    function updateTime() {
+        var date = new Date();
+        var hours = ('0' + date.getHours()).slice(-2);
+        var minutes = ('0' + date.getMinutes()).slice(-2);
+        var seconds = ('0' + date.getSeconds()).slice(-2);
+        var hexColor = '#' + hours + minutes + seconds;
+
+        document.body.style.backgroundColor = hexColor;
+        document.body.textContent = hours + ':' + minutes + ':' + seconds;
+
+        setTimeout(updateTime, 1000);
+    }
+
+    updateTime();
+</script>
+
+</body>
+</html>

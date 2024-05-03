@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    <script>
+        const options = ["JavaScript", "Java", "Python", "C++" ];
+
+        let heading = document.createElement("h1");
+        document.body.appendChild(heading);
+        heading.innerText = "Which is your favourite programming language:"
+
+        var dropdown = document.createElement("select");
+        document.body.appendChild(dropdown);
+
+        for (var i = 0; i < options.length; i++) {
+            var option = document.createElement("option");
+            option.text = options[i];
+            dropdown.add(option);
+        }
+    </script>
+</body>
+</html>
